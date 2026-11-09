@@ -3,6 +3,8 @@ name: Integration Tests
 on:
   pull_request:
 
+permissions: {}
+
 jobs:
   integration-test:
     permissions:
