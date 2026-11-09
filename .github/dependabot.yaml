@@ -22,6 +22,23 @@ updates:
         patterns:
           - "*"
 
+  # pre-commit hooks: monthly, single grouped PR.
+  - package-ecosystem: "pre-commit"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    labels:
+      - "dependencies"
+    open-pull-requests-limit: 100
+    commit-message:
+      prefix: "chore"
+    cooldown:
+      default-days: 7
+    groups:
+      pre-commit-hooks:
+        patterns:
+          - "*"
+
   # Python (uv): monthly, grouped
   - package-ecosystem: "uv"
     directory: "/"
